@@ -270,4 +270,276 @@
         }, 5000); // Change slide every 5 seconds
     </script>
 </body>
+</html><!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Teaser | Norton Gold Fields - Mechanical Leading Hand</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 600px;
+            margin: 5px auto;
+            padding: 5px;
+            background-color: #f0f0f0;
+        }
+        .job-teaser {
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            border: 2px solid #0056b3;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            background-color: #0056b3;
+            padding: 10px;
+        }
+        .logo {
+            width: 150px;
+            height: auto;
+            margin-right: 10px;
+        }
+        .job-title {
+            color: white;
+            font-size: 1.4em;
+            font-weight: bold;
+            margin: 0;
+            flex-grow: 1;
+            text-align: left;
+            padding-left: 20px;
+        }
+        .invisible-separator {
+            text-decoration: underline;
+            text-decoration-color: #0056b3;
+            margin: 0 5px;
+        }
+        .content {
+            padding: 5px;
+            position: relative;
+            overflow: hidden;
+            min-height: 160px;
+        }
+        .slide {
+            display: none;
+            animation: fadeEffect 0.5s;
+        }
+        .slide.active {
+            display: block;
+        }
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+        .nav-dots {
+            text-align: center;
+            margin-top: 2px;
+        }
+        .dot {
+            height: 8px;
+            width: 8px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 0 3px;
+            cursor: pointer;
+        }
+        .dot.active {
+            background-color: #0056b3;
+        }
+        .full-ad-toggle {
+            text-align: right;
+            padding: 2px 5px;
+            background-color: #f0f0f0;
+            font-size: 0.9em;
+        }
+        .full-job-ad {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+            background-color: #f9f9f9;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+        .full-job-ad.show {
+            max-height: 1000px; /* Adjust this value based on your content */
+            transition: max-height 0.5s ease-in;
+        }
+        .full-job-ad-content {
+            padding: 10px;
+        }
+        .apply-button {
+            display: block;
+            width: 100%;
+            padding: 8px;
+            background-color: #0056b3;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+        .apply-button:hover {
+            background-color: #003d82;
+        }
+        h2 {
+            margin: 5px 0;
+            color: #0056b3;
+            font-size: 1.1em;
+        }
+        ul {
+            margin: 3px 0;
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 2px;
+        }
+        p {
+            margin: 3px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="job-teaser">
+        <div class="header">
+            <img src="https://i.imgur.com/6XSLr4k.png" alt="Norton Gold Fields Logo" class="logo">
+            <h1 class="job-title">Mechanical Leading Hand<span class="invisible-separator"></span>Norton Gold Fields - Kalgoorlie</h1>
+        </div>
+        <div class="content">
+            <div class="slide active">
+                <h2>Job Overview</h2>
+                <ul>
+                    <li>🏭 Work at Norton Gold Fields, a major Australian gold producer</li>
+                    <li>📍 Location: Paddington (Residential Role in Kalgoorlie/Boulder)</li>
+                    <li>🗓️ Roster: 8:6 (NO FIFO OPTION)</li>
+                    <li>💼 Number of Vacancies: 2</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <h2>Key Responsibilities</h2>
+                <ul>
+                    <li>🛠️ Lead day-to-day mechanical maintenance team activities</li>
+                    <li>🔧 Install, maintain, and repair mechanical systems</li>
+                    <li>👨‍🔧 Provide relief coverage for Mechanical Supervisor</li>
+                    <li>📊 Conduct fault diagnosis and breakdown management</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <h2>Requirements</h2>
+                <ul>
+                    <li>🎓 Cert III in Engineering - Mechanical Trade (Must-have)</li>
+                    <li>🚗 Current WA Drivers Licence</li>
+                    <li>⚙️ Minimum 2 years mine site fixed plant mechanical experience</li>
+                    <li>📅 Minimum 5 years post-apprentice mechanical work experience</li>
+                </ul>
+            </div>
+            <div class="slide">
+                <h2>Benefits</h2>
+                <ul>
+                    <li>💰 Competitive Salary + Performance Bonus</li>
+                    <li>🏠 Residential Allowance</li>
+                    <li>🏥 Insurance + Private Health Cover</li>
+                    <li>🏋️ Discounted Gym Membership</li>
+                    <li>👨‍👩‍👧‍👦 Family friendly roster</li>
+                </ul>
+            </div>
+        </div>
+        <div class="nav-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+        <div class="full-ad-toggle">
+            <label for="fullAdToggle">Show Full Job Ad</label>
+            <input type="checkbox" id="fullAdToggle" onclick="toggleFullAd()">
+        </div>
+        <div class="full-job-ad" id="fullJobAd">
+            <div class="full-job-ad-content">
+                <h2>Full Job Description</h2>
+                <p><strong>About Norton Gold Fields:</strong> Norton Gold Fields is one of Australia's largest domestic gold producers, with recent annual production of up to 200,000 ounces. The Company has a mining and processing complex in Western Australia's world-class Kalgoorlie goldfield region, including a highly prospective tenement package of more than 1,000km² surrounding the 3.8Mtpa Paddington Mill.</p>
+                
+                <h3>About this role:</h3>
+                <p>The Mechanical Leading Hand is responsible for assisting the Mechanical Supervisor by providing day to day leadership to the mechanical maintenance team. You will also be required to assist in installation, maintenance and repair of all mechanical systems and components at Paddington Operations' fixed plant (Processing Mill) and its surrounding work sites.</p>
+
+                <h3>Key Duties:</h3>
+                <ul>
+                    <li>Undertake preventative maintenance inspections, equipment repairs and associated component change outs.</li>
+                    <li>Relief coverage for Mechanical Supervisor, where required.</li>
+                    <li>Diagnosis of faults and breakdown</li>
+                    <li>Carry out time and material estimations for planned tasks and enter associated parts orders.</li>
+                    <li>Ensure sufficient task analysis are completed to carry out work safely and in a timely manner.</li>
+                    <li>Coordinate all allocated work to trade employees in accordance with directions.</li>
+                    <li>Demonstrate Safety Leadership, proactively participate in incident investigations</li>
+                    <li>Provide training, supervision and support to Apprentices, where required.</li>
+                </ul>
+
+                <h3>Qualifications and Experience:</h3>
+                <ul>
+                    <li>Cert III in Engineering - Mechanical Trade (Must-have)</li>
+                    <li>Current unencumbered C Class Western Australian Drivers Licence</li>
+                    <li>Minimum of 2 years mine site fixed plant mechanical experience</li>
+                    <li>Minimum of 5 years post apprentice mechanical work experience</li>
+                    <li>Senior First Aid (desirable)</li>
+                    <li>Front Line Management Certificate IV (desirable)</li>
+                    <li>Forklift, EWP & CN Crane tickets (desirable)</li>
+                    <li>HR ticket (desirable)</li>
+                </ul>
+
+                <h3>Benefits:</h3>
+                <ul>
+                    <li>Salary + Performance Bonus + Residential Allowance</li>
+                    <li>Insurance + Private Health Cover</li>
+                    <li>Gym Membership Discount</li>
+                    <li>Comprehensive health and wellbeing programs</li>
+                    <li>EAP support</li>
+                    <li>Family friendly roster</li>
+                </ul>
+            </div>
+        </div>
+        <a href="https://www.seek.com.au/job/78205542?ref=search-standalone&type=promoted&origin=jobTitle#sol=a0a4609a6701e254c51fffbf25a584dc9842eafd" class="apply-button" target="_blank">Apply Now</a>
+    </div>
+
+    <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.getElementsByClassName("slide");
+            let dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}    
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].classList.remove("active");  
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].classList.remove("active");
+            }
+            slides[slideIndex-1].classList.add("active");  
+            dots[slideIndex-1].classList.add("active");
+        }
+
+        function toggleFullAd() {
+            const fullJobAd = document.getElementById("fullJobAd");
+            fullJobAd.classList.toggle("show");
+        }
+
+        // Auto-slide functionality
+        setInterval(() => {
+            plusSlides(1);
+        }, 5000); // Change slide every 5 seconds
+    </script>
+</body>
 </html>
